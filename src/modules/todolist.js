@@ -5,11 +5,10 @@ class ToDoList {
     this.list = [];
   }
 
-  addNewTask = (index = null, description = null, isCompleted = null) => {
+  addNewTask = (index = null, description = null, isCompleted) => {
     if (description) {
       const newTaskIndex = index || this.list.length + 1;
-      const newTaskIsCompleted = isCompleted || false;
-      const newTask = new Task(newTaskIndex, description, newTaskIsCompleted);
+      const newTask = new Task(newTaskIndex, description, isCompleted);
       this.list.push(newTask);
       return newTask;
     }
