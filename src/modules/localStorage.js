@@ -3,10 +3,7 @@ const addListToLocalStorage = (listToStore) => {
 };
 
 const loadListFromLocalStorage = () => {
-  const listToLoad = JSON.parse(localStorage.getItem('taskList'));
-  if (listToLoad === null) {
-    return [];
-  }
+  const listToLoad = JSON.parse(localStorage.getItem('taskList')) || [];
   return listToLoad;
 };
 
